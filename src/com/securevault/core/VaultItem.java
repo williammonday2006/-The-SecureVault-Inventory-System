@@ -15,6 +15,7 @@ public class VaultItem {
     public double getItemValue() {
         return itemValue;
     }
+    @Override
     public String toString() {
         return "Item: " + itemName + ", Value: $" + itemValue;
     }
