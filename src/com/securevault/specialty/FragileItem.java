@@ -1,17 +1,23 @@
 package com.securevault.specialty;
 
 import com.securevault.core.VaultItem;
+import com.securevault.exceptions.InvalidItemValueException;
 
-public class FragileItem  extends  VualtItem{
-    private boolean isWarpped;
+public class FragileItem extends VaultItem {
 
-    public FragileItem(String itemName,String itemValue, boolean isWarpped){
+    private boolean isWrapped;
+
+    public FragileItem(String itemName, double itemValue, boolean isWrapped)
+            throws InvalidItemValueException {
+
         super(itemName, itemValue);
-        this.isWarpped = isWarpped;
+        this.isWrapped = isWrapped;
     }
 
     @Override
     public String toString() {
-        return "Item: " + itemName + ", Value: $" + itemValue + ", Wrapped: " + isWarpped;
+        return "Item: " + getItemName()
+                + ", Value: $" + getItemValue()
+                + ", Wrapped: " + isWrapped;
     }
 }

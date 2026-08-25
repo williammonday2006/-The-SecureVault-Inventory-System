@@ -1,10 +1,17 @@
 package com.securevault.core;
 
+import com.securevault.exceptions.InvalidItemValueException;
+
 public class VaultItem {
     private String itemName;
     private double itemValue;
 
-    public VaultItem(String itemName, double itemValue) {
+    public VaultItem(String itemName, double itemValue) throws InvalidItemValueException{
+
+        if (itemValue <= 0){
+            throw new InvalidItemValueException("Item value must be greater than $0");
+        }
+
         this.itemName = itemName;
         this.itemValue = itemValue;
     }
