@@ -1,0 +1,1 @@
+Phase 1: I chose a private modifier as I have getter, setter methods. This is to largly make finding where, and how the methods are used easier for future proofing.
